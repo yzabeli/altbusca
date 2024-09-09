@@ -90,7 +90,7 @@ export default function FaleConosco() {
                         </div>
                     </div>
                     <div className="copy">
-                        <p>&copy; 2024 MysticMark. Todos os direitos reservados. </p>
+                        <p>&copy; 2024 AltBusca. Todos os direitos reservados. </p>
                     </div>
                 </div>
             </footer>
