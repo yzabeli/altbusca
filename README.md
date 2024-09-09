@@ -13,3 +13,6 @@ Este projeto foi criado com o objetivo de aplicar e aprofundar os conhecimentos 
 - **React Hook Form**: Para registrar as informações coletadas no formulário de cadastro, e conseguir manipula-las de forma otimizada, como a utilização da API para a busca do CEP do usuário, fazendo com que o preenchimento dos campos do endereço sejam otimizados, por já fazer esse preenchimento de forma automática, assim que o usuário retira o cursor do campo CEP.
 - **React Input Mask**: Para utilização das marcarasda biblioteca, para campos especificos como o de cnpj, ou telefone, por exemplo.
 - **React Router Dom**: Sistema de roteamento do projeto.
+
+
+**Desenvolvido por:** Caio Martins; Yzabeli Idalgo; Gabi Garcia; Mono Cardoso;
