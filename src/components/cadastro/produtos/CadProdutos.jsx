@@ -19,6 +19,7 @@ export default function CadProdutos() {
             descr: data.descr,
             preco: data.preco,
             loja: data.loja,
+            link: data.link,
             imageURL: imageURL
         };
         console.log(newProduct)
@@ -105,6 +106,13 @@ export default function CadProdutos() {
                                                         placeholder="Nome da loja"
                                                     />
                                                 </Form.Group>
+                                                <Form.Group className="mb-3">
+                                                    <Form.Control
+                                                        type="text"
+                                                        {...register("link")}
+                                                        placeholder="Link do produto"
+                                                    />
+                                                </Form.Group>
                                                 <Button className="btn__cadProdutos" type="submit">Enviar</Button>
                                             </Form>
                                         </Container>
@@ -123,6 +131,7 @@ export default function CadProdutos() {
                                                     <p><b>Descrição:</b> {product.descr}</p>
                                                     <p><b>Preço:</b> {product.preco}</p>
                                                     <p><b>Loja:</b> {product.loja}</p>
+                                                    <p><b>Link:</b> {product.link}</p>
                                                 </div>
                                             ))
                                         ) : (
