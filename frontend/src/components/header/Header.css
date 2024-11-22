@@ -1,0 +1,133 @@
+.logo__principal .navbar-brand {
+    color: #fff;
+}
+
+.area__buscar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40vw;
+    position: relative;
+}
+
+.input__busca .input-group .form-control {
+    width: 40vw;
+    height: 3rem;
+    padding-left: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 1rem;
+}
+
+.area__buscar #listaProds {
+    display: block;
+    width: 95%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 5rem;
+}
+
+.area__buscar #listaProds li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    border: 1px solid #fff;
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.area__buscar #listaProds li a:hover {
+    background-color: #444;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+#cabecalho .nav-link.active {
+    border-radius: 10px;
+    background-color: #fff;
+    color: #333;
+}
+
+#cabecalho .nav-link {
+    color: #fff;
+}
+
+.navbar-toggler {
+    background-color: #dbdbdb;
+}
+
+.section-title {
+    font-size: 2em;
+}
+
+.carousel-item {
+    transition: transform 1s ease-in-out;
+}
+
+#produtos {
+    background-color: #dbdbdb;
+}
+
+.text-colored {
+    color: #333;
+}
+
+.nav-produtos .nav-link.active,
+#fale-conosco button {
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-produtos .nav-link:hover {
+    color: #333;
+}
+
+.form-control:focus {
+    border-color: #333;
+    box-shadow: 0 0 0 0.2rem rgba(75, 75, 75, 0.5);
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links li a {
+    text-decoration: none;
+}
+
+textarea {
+    resize: none;
+}
+
+.animation {
+    transition: height 1s ease;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em 0;
+}
+
+@media (max-width: 767px) {
+    .area__buscar {
+        display: none;
+    }
+
+    .container {
+        display: block;
+    }
+}
+.section-title{
+
+        font-family: "Pirata One", system-ui !important;
+       
+}
