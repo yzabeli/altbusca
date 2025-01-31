@@ -1,7 +1,7 @@
 import express, { Request, Response, NextFunction, Router } from "express";
 import 'express-async-errors';
 import cors from 'cors';
-import router from './routes.ts'
+import router from './routes'
 
 const app = express();
 app.use(express.json());
