@@ -4,16 +4,18 @@ interface cadProdutos {
     nome: string
     descricao: string
     preco: string
+    idGrupos: string
 };
 
 class ProdutosServices {
-    async cadastrarProdutos({ nome, descricao, preco }: cadProdutos) {
+    async cadastrarProdutos({ nome, descricao, preco, idGrupos }: cadProdutos) {
         // console.log(nome, preco);
         await prismaClient.produtos.create({
             data: {
                 nome: nome,
                 descricao: descricao,
-                preco: preco
+                preco: preco,
+                idGrupos: idGrupos
             }
         });
         return ({ dados: 'Cadastro Efetuado com Sucesso' });
@@ -24,7 +26,13 @@ class ProdutosServices {
             select: {
                 nome: true,
                 descricao: true,
-                preco: true
+                preco: true,
+                idGrupos: true,
+                grupos: {
+                    select: {
+                        nome: true
+                    }
+                }
             }
         });
        

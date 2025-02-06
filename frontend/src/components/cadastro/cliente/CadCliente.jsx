@@ -37,7 +37,7 @@ export default function CadCliente() {
                 numero,
                 cidade,
                 uf,
-                password
+                password,
             });
             toast.success('Cadastro Efetuado Com Sucesso', {
                 toastId: 'ToastId'

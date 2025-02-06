@@ -19,7 +19,7 @@ export function estaAutenticado(
     try {
         const { sub } = verify(
             token,
-            process.env.JWT_SECRETO
+            process.env.JWT_SECRETO || "140864078aeca1c7c35b4beb33c53c34"
         ) as Payload
         req.usuarioId = sub
         return next()

@@ -4,12 +4,13 @@ import { ProdutosServices } from "../../Services/Produtos/ProdutosServices"
 
 class ProdutosControllers {
     async cadastrarProdutos(req: Request, res: Response) {
-        const { nome, descricao, preco } = req.body;
+        const { nome, descricao, preco, idGrupos } = req.body;
         const enviarDadosServices = new ProdutosServices();
         const resposta = enviarDadosServices.cadastrarProdutos({
             nome,
             descricao,
-            preco
+            preco,
+            idGrupos
         });
         return res.json({
             success: true,

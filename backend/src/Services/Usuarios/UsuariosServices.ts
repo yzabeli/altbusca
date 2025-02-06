@@ -12,7 +12,6 @@ interface cadUsuarios {
     cidade: string
     uf: string
     password: string
-    idGrupos: string
 };
 
 interface AlterarUsuarios {
@@ -22,7 +21,7 @@ interface AlterarUsuarios {
 }
 
 class UsuariosServices {
-    async cadastrarUsuarios({ nome, email, cnpj, telefone, cep, rua, numero, cidade, uf, password, idGrupos }: cadUsuarios) {
+    async cadastrarUsuarios({ nome, email, cnpj, telefone, cep, rua, numero, cidade, uf, password }: cadUsuarios) {
         const senhaCrypt = await hash(password, 8);
         await prismaClient.usuarios.create({
             data: {
@@ -36,7 +35,6 @@ class UsuariosServices {
                 cidade: cidade,
                 estado: uf,
                 senha: senhaCrypt,
-                idGrupos: idGrupos
             }
         });
         return ({ dados: 'Cadastro Efetuada Com Sucesso' });
@@ -48,12 +46,6 @@ class UsuariosServices {
                 id: true,
                 nome: true,
                 email: true,
-                idGrupos: true,
-                grupos: {
-                    select: {
-                        nome: true
-                    }
-                }
             }
         })
         return resposta

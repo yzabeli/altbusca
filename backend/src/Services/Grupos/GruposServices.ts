@@ -6,7 +6,7 @@ interface CadGrupos {
 
 class GruposServices {
     async cadastrarGrupos({ nome }: CadGrupos) {
-        await prismaClient.cadastrarGrupos.create({
+        await prismaClient.grupos.create({
             data: {
                 nome: nome
             }
@@ -16,7 +16,7 @@ class GruposServices {
 
     // **************************************
     async listarGrupos() {
-        const resposta = await prismaClient.cadastrarGrupos.findMany();
+        const resposta = await prismaClient.grupos.findMany();
         return resposta;
     };
     // ******************************************

@@ -29,9 +29,6 @@ model Usuarios {
   data_criacao   DateTime @default(now())
   data_alteracao DateTime @updatedAt
 
-  grupos     Grupos?   @relation(fields: [idGrupos], references: [id])
-  idGrupos   String?
-
   @@map("usuarios")
 }
 
@@ -44,7 +41,7 @@ model Grupos {
   //data_alteracao DateTime @updatedAt @db.Timestamptz()
   data_alteracao DateTime @updatedAt
 
-  usuarios Usuarios[]
+  produtos Produtos[]
 
   @@map("grupos")
 }
@@ -56,9 +53,9 @@ model Pedidos {
   preco     String
 
   //data_criacao   DateTime @default(now()) @db.Timestamptz()
-  data_criacao   DateTime   @default(now())
+  data_criacao   DateTime @default(now())
   //data_alteracao DateTime @updatedAt @db.Timestamptz()
-  data_alteracao DateTime   @updatedAt
+  data_alteracao DateTime @updatedAt
 
   @@map("pedidos")
 }
@@ -69,10 +66,13 @@ model Produtos {
   descricao String
   preco     String
 
+  grupos   Grupos? @relation(fields: [idGrupos], references: [id])
+  idGrupos String?
+
   //data_criacao   DateTime @default(now()) @db.Timestamptz()
-  data_criacao   DateTime   @default(now())
+  data_criacao   DateTime @default(now())
   //data_alteracao DateTime @updatedAt @db.Timestamptz()
-  data_alteracao DateTime   @updatedAt
+  data_alteracao DateTime @updatedAt
 
   @@map("produtos")
 }
