@@ -96,7 +96,7 @@ export default function CadCliente() {
                             type="text"
                             placeholder="CNPJ"
                             value={cnpj}
-                            onChange={(e) => setCnpj}
+                            onChange={(e) => setCnpj(e.target.value)}
                         />
                         <input
                             type="tel"
