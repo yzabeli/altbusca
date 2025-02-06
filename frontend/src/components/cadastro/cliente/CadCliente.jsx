@@ -32,6 +32,8 @@ export default function CadCliente() {
             await apiLocal.post('/CadastrarUsuarios', {
                 nome,
                 email,
+                cnpj,
+                telefone,
                 cep,
                 rua,
                 numero,
@@ -44,9 +46,10 @@ export default function CadCliente() {
             });
             mudarTela('/login');
         } catch (err) {
-            toast.error('Erro ao Comunicar com BackEnd', {
-                toastId: 'ToastId'
-            });
+            console.log(err)
+            // toast.error('Erro ao Comunicar com BackEnd', {
+            //     toastId: 'ToastId'
+            // });
         };
     };
 
@@ -60,7 +63,7 @@ export default function CadCliente() {
                     cidade: resposta.data.localidade,
                     uf: resposta.data.uf,
                 });
-                console.log(resposta);
+                // console.log(resposta);
             } catch (error) {
                 console.log('Erro ao buscar o CEP', error);
             };
