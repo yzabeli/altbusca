@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { AutenticadoContexto } from '../../../Contexts/authContexts';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Person } from 'react-bootstrap-icons';
@@ -6,6 +7,9 @@ import { Person } from 'react-bootstrap-icons';
 import '../Header.css';
 
 export default function Header() {
+    const { verificarToken } = useContext(AutenticadoContexto);
+    verificarToken();
+
     return (
         <Navbar expand="lg" sticky="top" className="p-3" id="cabecalho">
             <Container className='d-lg-flex d-md-block d-sm-block'>

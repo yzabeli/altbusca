@@ -1,4 +1,5 @@
 // Importação das imagens
+import menu_666 from "../imgs/todos.jpg"
 import menu_2 from "../imgs/corset1beefancy.png";
 import menu_3 from "../imgs/acessorio.png";
 import menu_5 from "../imgs/saia1.png";
@@ -70,7 +71,7 @@ export const categorias = [
     {
         menu_id: "todos",
         menu_name: "Todos",
-        menu_image: menu_1,
+        menu_image: menu_666,
     },
     {
         menu_id: "vestidos",

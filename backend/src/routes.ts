@@ -17,7 +17,7 @@ router.put('/AlterarDadosUsuarios', estaAutenticado, new UsuariosControllers().a
 router.delete('/ApagarUsuario/:id', estaAutenticado, new UsuariosControllers().apagarUsuarios)
 
 router.post('/CadastrarGrupos', estaAutenticado, new GruposControllers().cadastrarGrupos)
-router.get('/ListarGrupos', new GruposControllers().listarGrupos); // ***********************
+router.get('/ListarGrupos', new GruposControllers().listarGrupos);
 
 router.post('/LoginUsuarios', new LoginUsuariosControllers().loginUsuarios)
 router.get('/VerificaToken', estaAutenticado, new LoginUsuariosControllers().verificaToken)

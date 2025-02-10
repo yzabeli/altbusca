@@ -12,10 +12,11 @@ class ProdutosControllers {
             preco,
             idGrupos
         });
-        return res.json({
-            success: true,
-            message: "Ok!!"
-        });
+        return res.json(resposta);
+        // return res.json({
+        //     success: true,
+        //     message: "Ok!!"
+        // });
     };
 
     async consultarProdutos(req: Request, res: Response) {

@@ -11,13 +11,11 @@ class GruposControllers{
         return res.json(resposta)
     }
     
-    // ********************************************
     async listarGrupos (req: Request, res: Response) {
         const enviarDadosServices = new GruposServices()
         const resposta = await enviarDadosServices.listarGrupos();
         return res.json(resposta);
     };
-    // *********************************************
 }
 
 export { GruposControllers}
