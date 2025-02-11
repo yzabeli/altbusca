@@ -9,7 +9,6 @@ interface cadProdutos {
 
 class ProdutosServices {
     async cadastrarProdutos({ nome, descricao, preco, idGrupos }: cadProdutos) {
-        // console.log(nome, preco);
         await prismaClient.produtos.create({
             data: {
                 nome: nome,

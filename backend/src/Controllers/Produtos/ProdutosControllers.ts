@@ -12,6 +12,7 @@ class ProdutosControllers {
             preco,
             idGrupos
         });
+        console.log(resposta)
         return res.json(resposta);
         // return res.json({
         //     success: true,

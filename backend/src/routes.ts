@@ -22,4 +22,6 @@ router.get('/ListarGrupos', new GruposControllers().listarGrupos);
 router.post('/LoginUsuarios', new LoginUsuariosControllers().loginUsuarios)
 router.get('/VerificaToken', estaAutenticado, new LoginUsuariosControllers().verificaToken)
 
+router.post('/CadastrarProdutos', estaAutenticado, new ProdutosControllers().cadastrarProdutos);
+
 export default router;
